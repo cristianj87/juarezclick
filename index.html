@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Juárez Click</title>
+    <link rel="icon" type="image/png" href="img/juarezclick1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0056b3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-branding">
+            <h1><i class="fas fa-map-marker-alt"></i> Juárez Click</h1>
+            <p class="subtitle">La frontera a un click</p>
+        </div>
+        <div class="header-info">
+            <span id="date-display"></span>
+            <span id="weather-display"><i class="fas fa-spinner fa-spin"></i> Obteniendo clima...</span>
+        </div>
+        <button id="btn-logout" class="hidden">Cerrar Sesión</button>
+    </header>
+
+    <main>
+        <section id="auth-section" class="card-container">
+            <div class="auth-card">
+                <h1 id="auth-title">Iniciar Sesión</h1>
+                
+                <form id="login-form">
+                    <input type="email" id="login-email" placeholder="Correo Electrónico" required>
+                    <input type="password" id="login-password" placeholder="Contraseña" required>
+                    <button type="submit" class="btn-primary">Ingresar</button>
+                    <p><a href="#" id="link-reset">¿Olvidaste tu contraseña?</a></p>
+                    <p>¿No tienes cuenta? <a href="#" id="link-register">Regístrate</a></p>
+                </form>
+
+                <form id="register-form" class="hidden">
+                    <input type="text" id="reg-username" placeholder="Nombre de usuario" required>
+                    <input type="text" id="reg-name" placeholder="Nombre completo" required>
+                    <input type="email" id="reg-email" placeholder="Correo electrónico" required>
+                    <input type="password" id="reg-password" placeholder="Contraseña" required>
+                    <button type="submit" class="btn-primary">Registrarse</button>
+                    <p>¿Ya tienes cuenta? <a href="#" id="link-login">Inicia sesión</a></p>
+                </form>
+
+                <form id="reset-form" class="hidden">
+                    <p>Ingresa tu correo para recuperar la contraseña.</p>
+                    <input type="email" id="reset-email" placeholder="Correo electrónico" required>
+                    <button type="submit" class="btn-primary">Enviar enlace</button>
+                    <p><a href="#" id="link-login-from-reset">Volver</a></p>
+                </form>
+                <div id="auth-msg"></div>
+            </div>
+        </section>
+
+        <section id="dashboard-section" class="hidden">
+            <div class="welcome-banner">
+                <center><h2>Bienvenid@, <span id="user-greeting">Usuario</span></h2>
+                <p>Accede rápidamente a los servicios y trámites de Ciudad Juárez y el Estado.</p>
+                <p>El pago de alguno de los servicios puede generar gastos de comisión propios de cada portal.</p>
+                </center>
+            </div>
+
+            <div class="services-grid">
+                <a href="https://predial2.juarez.gob.mx/" target="_blank" class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Pago de Predial</h3>
+                    <p>Gobierno Municipal de Juárez</p>
+                </a>
+                <a href="https://jmasjuarez.pagosdigitales.com/" target="_blank" class="service-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>JMAS Juárez</h3>
+                    <p>Pago de recibo de agua</p>
+                </a>
+                <a href="https://ipagos.chihuahua.gob.mx/" target="_blank" class="service-card">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h3>iPagos Chihuahua</h3>
+                    <p>Trámites y pagos estatales</p>
+                </a>
+                <a href="https://fgewebapps.chihuahua.gob.mx/fgecap" target="_blank" class="service-card">
+                    <i class="fas fa-id-card"></i>
+                    <h3>Antecedentes Penales</h3>
+                    <p>Constancia de Fiscalía</p>
+                </a>
+                <a href="https://www.empleosmaquila.com/listaofertas.aspx" target="_blank" class="service-card">
+                    <i class="fas fa-industry"></i>
+                    <h3>Empleos Maquila</h3>
+                    <p>Bolsa de trabajo industrial</p>
+                </a>
+                <a href="https://www.zonaturistica.com/que-hacer-en/chihuahua/ciudad-juarez" target="_blank" class="service-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Zonas Turísticas</h3>
+                    <p>Descubre qué hacer en la ciudad</p>
+                </a>
+                <a href="https://gasnn.com.mx/#/pagoenlinea" target="_blank" class="service-card">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <h3>Gas Natural del Norte</h3>
+                    <p>Pago de recibo de Gas</p>
+                </a>
+                <a href="https://www.pagosdigitales.com/Website/Servicios/ConsultarSaldo/a6c722f8-990e-11e8-9a86-5600006e8c82?controllerPost=Gestopagos&actionPost=ConsultarSaldo" target="_blank" class="service-card">
+                    <i class="fa-solid fa-charging-station"></i>
+                    <h3>CFE</h3>
+                    <p>Pago de recibo de Luz</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+
+    <footer id="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Juárez Connect. Desarrollado por Cristian J. Mariano S. para la comunidad fronteriza.</p>
+            <div class="footer-links">
+                <a href="#">Términos de Servicio</a> | 
+                <a href="#">Privacidad</a>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
