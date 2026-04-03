@@ -1,6 +1,6 @@
 {
-  "name": "Portal Juárez Connect",
-  "short_name": "JuárezConnect",
+  "name": "Portal Juárez Click",
+  "short_name": "JuárezClick",
   "description": "Servicios y pagos de Ciudad Juárez",
   "start_url": "/index.html",
   "display": "standalone",
